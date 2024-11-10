@@ -1,0 +1,19 @@
+{
+    "frames": [
+      { "filename": "Idle_0", "frame": { "x": 0, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_1", "frame": { "x": 100, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_2", "frame": { "x": 200, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_3", "frame": { "x": 300, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_4", "frame": { "x": 400, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_5", "frame": { "x": 500, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_6", "frame": { "x": 600, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_7", "frame": { "x": 700, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_8", "frame": { "x": 800, "y": 0, "w": 100, "h": 100 } },
+      { "filename": "Idle_9", "frame": { "x": 900, "y": 0, "w": 100, "h": 100 } }
+    ],
+    "meta": {
+      "image": "Idle.png",
+      "size": { "w": 1000, "h": 100 },
+      "scale": "1"
+    }
+  }
