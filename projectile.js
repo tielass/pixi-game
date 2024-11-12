@@ -8,7 +8,7 @@ export async function createProjectile(app, startX, startY, direction) {
   projectile.scale.set(2);
   projectile.x = startX;
   projectile.y = startY;
-  projectile.vx = direction === "right" ? 5 : -10; 
+  projectile.vx = direction === "right" ? 5 : -10;
 
   app.stage.addChild(projectile);
   return projectile;
@@ -26,7 +26,7 @@ export function updateProjectiles(projectiles) {
 }
 
 export function generateRandomProjectile(app, groundY) {
-  const startX = Math.random() < 0.5 ? 0 : window.innerWidth; 
+  const startX = Math.random() < 0.5 ? 0 : window.innerWidth;
   const startY = groundY - 80 + Math.random() * 100;
   const direction = startX === 0 ? "right" : "left";
 
@@ -37,9 +37,15 @@ export function checkCollision(sprite1, sprite2) {
   const bounds1 = sprite1.getBounds();
   const bounds2 = sprite2.getBounds();
 
-
-  return bounds1.x < bounds2.x + bounds2.width &&
-         bounds1.x + bounds1.width > bounds2.x &&
-         bounds1.y < bounds2.y + bounds2.height &&
-         bounds1.y + bounds1.height > bounds2.y;
+  let xDelta = sprite1.isAttacking ? 0 : sprite1.width / 2;
+  let yDelta = sprite1.height / 2;
+  let collision =
+    bounds1.minX + xDelta < bounds2.maxX &&
+    bounds1.maxX - xDelta > bounds2.minX &&
+    bounds1.minY + yDelta < bounds2.maxY &&
+    bounds1.maxY - yDelta > bounds2.minY;
+  if (collision) {
+    console.log("Collision " + bounds1 + ", " + bounds2);
+  }
+  return collision;
 }
